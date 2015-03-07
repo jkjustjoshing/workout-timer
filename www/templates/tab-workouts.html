@@ -1,0 +1,19 @@
+<ion-view view-title="Workouts">
+  <ion-content class="padding">
+    <div class="list card">
+      <!--div class="item item-divider">Workouts</div-->
+      <ul class="list">
+        <li class="item" ng-repeat="workout in workouts">
+          <a ng-click="openWorkout(workout)">
+            {{workout.name}}
+          </a>
+        </li>
+        <li class="item">
+          <a ng-click="newWorkout()">
+            New workout...
+          </a>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>
