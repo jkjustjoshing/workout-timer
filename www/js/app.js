@@ -42,12 +42,18 @@ angular.module('starter', [
 
   .state('tab.workouts', {
     url: '/workouts',
+    abstract: true,
     views: {
       'tab-workouts': {
-        templateUrl: 'templates/tab-workouts.html',
+        templateUrl: 'templates/workouts/index.html',
         controller: 'WorkoutsCtrl'
       }
     }
+  })
+  .state('tab.workouts.my-workouts', {
+    url: '/my-workouts',
+    templateUrl: 'templates/workouts/my-workouts.html',
+    controller: 'WorkoutsCtrl'
   })
 
   .state('tab.chats', {
@@ -80,6 +86,6 @@ angular.module('starter', [
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/workouts');
+  $urlRouterProvider.otherwise('/tab/workouts/my-workouts');
 
 });
