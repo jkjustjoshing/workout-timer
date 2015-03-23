@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter')
 
 .controller('WorkoutsCtrl', function($scope, workouts) {
   $scope.workouts = workouts.all();
@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
-  }
+  };
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
