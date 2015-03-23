@@ -6,6 +6,10 @@ angular.module('starter')
     return Section;
 
     function Section(config) {
+      if(config instanceof Section) {
+        return config;
+      }
+
       if(!(this instanceof Section)) {
         throw new Error('Must call Section with "new"');
       }
