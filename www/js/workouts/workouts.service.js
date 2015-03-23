@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('starter')
 
 .factory('workouts', function() {
   var workouts = [
@@ -78,6 +78,7 @@ angular.module('starter.services', [])
     //   chats.splice(chats.indexOf(chat), 1);
     // },
     get: function(workoutId) {
+      console.log('a')
       for (var i = 0; i < workouts.length; i++) {
         if (workouts[i].id === parseInt(workoutId)) {
           return workouts[i];
